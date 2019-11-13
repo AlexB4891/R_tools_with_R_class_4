@@ -15,7 +15,7 @@ class: center, middle, inverse, title-slide
 ## Clase 4: Manejo de bases de datos I
 ### Alex Bajaña
 ### infoRmal
-### 2019/11 (updated: 2019-11-11)
+### 2019/11 (Actualizado: 2019-11-13)
 
 ---
 
@@ -45,7 +45,7 @@ Reglas generales:
 
 [Saiku](https://srienlinea.sri.gob.ec/saiku-ui/#cancel) es un sistema implementado por el Servicio de Rentas internas para consultar valores agregados de las cuentas fiscales considerando distintas agregaciones. Para esta presentación se realizó la siguiente consulta:
 
-![](saiku.png)
+![](img/saiku.png)
 
 ---
 
@@ -108,9 +108,9 @@ str(clases)
 ##  $ IMPUESTO.CAUSADO..601.                : chr "numeric"
 ```
 
-`sapply` es una variante de `lapply` pero simplifica al tipo más simple de objeto, `vapply` realiza la misma operación salvo que permite definir el tipo de resultado que se desea.
-
 ---
+
+&gt;`sapply` es una variante de `lapply` pero simplifica al tipo más simple de objeto, `vapply` realiza la misma operación salvo que permite definir el tipo de resultado que se desea.
 
 # Función 'which'
 
@@ -127,8 +127,8 @@ vector
 ```
 
 ```
-##  [1] 39 18 85 50  0 73 86 47 31  0  0  5 87 78 75  6 37 14 79 67 17 69 23
-## [24] 65  0  0 25 33 55  1
+##  [1]  9 54 45  3  0 49 43 51 27  7 17 22  0  2 70 19 81 71 42  0 37  5 82
+## [24] 11 75  0 47 25  0  0
 ```
 ---
 
@@ -143,19 +143,24 @@ vt_ts
 ```
 
 ```
-##              Jan         Feb         Mar         Apr         May
-## 2015  0.58781728 -1.00661301  0.94726241 -0.23731518 -0.08842016
-## 2016  0.84950293 -2.14178217  0.76220571  1.94227601  0.79839444
-## 2017 -0.60268235                                                
-##              Jun         Jul         Aug         Sep         Oct
-## 2015 -2.10690090  0.69599152  1.32933315  0.78350745  0.37092474
-## 2016  1.13706941  0.54461580 -1.81694970 -1.26693324 -0.06860200
-## 2017                                                            
-##              Nov         Dec
-## 2015 -2.13481321 -1.02015225
-## 2016 -0.85416323 -0.04129652
+##               Jan          Feb          Mar          Apr          May
+## 2015  0.395070757 -0.077809894  1.962895390 -0.079855094 -0.768765234
+## 2016  1.562817203 -0.784280887  0.003511419 -0.364553795  1.410568976
+## 2017 -0.066125664                                                    
+##               Jun          Jul          Aug          Sep          Oct
+## 2015 -0.826068064 -1.658443226 -0.082532216 -0.727824599 -0.847498286
+## 2016 -0.531502182 -1.445931772  0.799218883  0.039452329  0.158144415
+## 2017                                                                 
+##               Nov          Dec
+## 2015  1.563884659  0.452892689
+## 2016 -2.312977493  1.688342345
 ## 2017
 ```
+
+---
+
+# Prueba de independencia
+
 
 ```r
 Box.test(vt_ts ,type = "Ljung-Box" )
@@ -166,10 +171,9 @@ Box.test(vt_ts ,type = "Ljung-Box" )
 ## 	Box-Ljung test
 ## 
 ## data:  vt_ts
-## X-squared = 0.11233, df = 1, p-value = 0.7375
+## X-squared = 0.74429, df = 1, p-value = 0.3883
 ```
 
----
 
 # Diferenciación:
 
@@ -182,10 +186,10 @@ vt_dff
 
 ```
 ##             Jan        Feb        Mar        Apr        May        Jun
-## 2016  0.2616857 -1.1351692 -0.1850567  2.1795912  0.8868146  3.2439703
-## 2017 -1.4521853                                                       
+## 2016  1.1677464 -0.7064710 -1.9593840 -0.2846987  2.1793342  0.2945659
+## 2017 -1.6289429                                                       
 ##             Jul        Aug        Sep        Oct        Nov        Dec
-## 2016 -0.1513757 -3.1462829 -2.0504407 -0.4395267  1.2806500  0.9788557
+## 2016  0.2125115  0.8817511  0.7672769  1.0056427 -3.8768622  1.2354497
 ## 2017
 ```
 
@@ -237,7 +241,12 @@ Quiero comparar las compras de las tres regiones naturales:
   
   3. ¿Que provincia tuve el menor monto de compras en los meses marzo, abril y mayo de 2016? 
 
-  [Hint:]() Filtro la tabla para las fechas señaladas, empleo la función `split` para guardar en una lista la información de cada una de las fechas. Con `lapply` y la función `which.min` hallo la provincia que presenta el minimo
+  [Hint:]() Filtro la tabla para las fechas señaladas, empleo la función `split` para guardar en una lista la información de cada una de las fechas. Con `lapply` y la función `which.min` hallo la provincia que presenta el minimo  
+
+---
+class: inverse, center, middle
+
+# Gracias
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

@@ -19,7 +19,8 @@
 # 
 # Hint: Utilizar la función `aggregate` para encontrar las sumas agrupadas por fecha y region natural.
 # 
-# 3. ¿Que provincia tuve el menor monto de compras en los meses marzo, abril y mayo de 2016? 
-#   
-# Hint: Filtro la tabla para las fechas señaladas, empleo la función `split` para guardar en una lista la información de cada una de las fechas. Con `lapply` y la función `which.min` hallo la provincia que presenta el minimo  
+# 3. ¿Durante que mes entre marzo y mayo de 2016 tuvieron las compras más bajas las distintas regiones?  
 
+# Hint: Filtro la tabla para las fechas señaladas, empleo la función `split` para 
+# guardar en una lista la información de cada una de las regiones. Con `lapply` y 
+# la función `which.min` hallo la fecha en que se presenta el minimo 

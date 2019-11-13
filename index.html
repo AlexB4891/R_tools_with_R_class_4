@@ -127,8 +127,8 @@ vector
 ```
 
 ```
-##  [1]  9 54 45  3  0 49 43 51 27  7 17 22  0  2 70 19 81 71 42  0 37  5 82
-## [24] 11 75  0 47 25  0  0
+##  [1] 14 61  0 35 59 50  9  0 70 13 22  0 41 62  6 74  0 10  0 53 75 39 73
+## [24]  0 78  0 57 49  0 69
 ```
 ---
 
@@ -143,17 +143,17 @@ vt_ts
 ```
 
 ```
-##               Jan          Feb          Mar          Apr          May
-## 2015  0.395070757 -0.077809894  1.962895390 -0.079855094 -0.768765234
-## 2016  1.562817203 -0.784280887  0.003511419 -0.364553795  1.410568976
-## 2017 -0.066125664                                                    
-##               Jun          Jul          Aug          Sep          Oct
-## 2015 -0.826068064 -1.658443226 -0.082532216 -0.727824599 -0.847498286
-## 2016 -0.531502182 -1.445931772  0.799218883  0.039452329  0.158144415
-## 2017                                                                 
-##               Nov          Dec
-## 2015  1.563884659  0.452892689
-## 2016 -2.312977493  1.688342345
+##              Jan         Feb         Mar         Apr         May
+## 2015  1.62289315  0.19638013  0.02318738  1.65582935 -0.33074588
+## 2016  0.41262712 -0.51191311  0.12699473 -0.29698341 -0.36654485
+## 2017 -0.22022750                                                
+##              Jun         Jul         Aug         Sep         Oct
+## 2015 -0.92835105  0.34803043 -1.47702771 -0.08512308  0.08700658
+## 2016 -0.47305206 -1.95637765  0.64122078  1.17067759  0.78078442
+## 2017                                                            
+##              Nov         Dec
+## 2015  1.19056440  1.23993974
+## 2016  0.47319593  1.18039122
 ## 2017
 ```
 
@@ -171,7 +171,7 @@ Box.test(vt_ts ,type = "Ljung-Box" )
 ## 	Box-Ljung test
 ## 
 ## data:  vt_ts
-## X-squared = 0.74429, df = 1, p-value = 0.3883
+## X-squared = 0.60341, df = 1, p-value = 0.4373
 ```
 
 
@@ -185,11 +185,14 @@ vt_dff
 ```
 
 ```
-##             Jan        Feb        Mar        Apr        May        Jun
-## 2016  1.1677464 -0.7064710 -1.9593840 -0.2846987  2.1793342  0.2945659
-## 2017 -1.6289429                                                       
-##             Jul        Aug        Sep        Oct        Nov        Dec
-## 2016  0.2125115  0.8817511  0.7672769  1.0056427 -3.8768622  1.2354497
+##              Jan         Feb         Mar         Apr         May
+## 2016 -1.21026603 -0.70829325  0.10380735 -1.95281277 -0.03579897
+## 2017 -0.63285462                                                
+##              Jun         Jul         Aug         Sep         Oct
+## 2016  0.45529899 -2.30440809  2.11824849  1.25580067  0.69377783
+## 2017                                                            
+##              Nov         Dec
+## 2016 -0.71736847 -0.05954852
 ## 2017
 ```
 
@@ -239,9 +242,9 @@ Quiero comparar las compras de las tres regiones naturales:
   
   [Hint:]() Utilizar la función `aggregate` para encontrar las sumas agrupadas por fecha y region natural.
   
-  3. ¿Que provincia tuve el menor monto de compras en los meses marzo, abril y mayo de 2016? 
-
-  [Hint:]() Filtro la tabla para las fechas señaladas, empleo la función `split` para guardar en una lista la información de cada una de las fechas. Con `lapply` y la función `which.min` hallo la provincia que presenta el minimo  
+  3. ¿Durante que mes entre marzo y mayo de 2016 tuvieron las compras más bajas las distintas regiones?  
+   
+  &lt;font color = '#d7215b'&gt;Hint:&lt;/font&gt; Filtro la tabla para las fechas señaladas, empleo la función `split` para guardar en una lista la información de cada una de las regiones. Con `lapply` y la función `which.min` hallo la el mes en que se presenta el minimo  
 
 ---
 class: inverse, center, middle
